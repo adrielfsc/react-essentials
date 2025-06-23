@@ -1,4 +1,4 @@
-export default function TabButton({children, onSelect, isSelected}){
+export default function TabButton({children, isSelected, ...props}){
     // document.querySelector('button').addEventListener('click',()=>{});
     // function handleClick(){
     //     console.log("Hello world!")
@@ -8,7 +8,7 @@ export default function TabButton({children, onSelect, isSelected}){
     // nesse caso ela só vai ser executada pelo próprio react quando o evento for inicializado
     return( 
         <li>
-            <button className={isSelected ? 'active' : ''} onClick={onSelect}>{children}</button>
+            <button className={isSelected ? 'active' : ''} {...props}>{children}</button>
         </li>
     );
 }
